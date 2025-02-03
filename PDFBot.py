@@ -23,7 +23,7 @@ class PDFChatAssistant:
         instance.
         """
         os.environ["GROQ_API_KEY"] = os.getenv(GROQ_API_KEY)
-        self.llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0.5)
+        self.llm = ChatGroq(model="llama-3.3-70b-specdec", temperature=0.5)
         
         # Create vectordatabase to add text_embeddings
         self.vector_store = Chroma(
